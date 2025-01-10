@@ -1,7 +1,7 @@
 
 import pandas as pd
 import streamlit as st
-st.write("welcome to AVD2025 sambhajinagar")
+st.write("welcome to AVD2025")
 data = {
     "Task":["Extract","Transform","Load"],
     "Status":["Completed","Inprogess","Pending"]
