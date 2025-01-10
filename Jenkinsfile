@@ -8,7 +8,7 @@ pipeline {
         }
         stage("Cleanup Activities") {
             steps {
-                sh 'docker rm-f $(docker ps -aq)'
+                sh 'docker rm -f $(docker ps -aq)'
             }
         }
         stage("Build Docker Image") {
