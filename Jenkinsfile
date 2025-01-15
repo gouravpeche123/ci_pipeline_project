@@ -1,14 +1,13 @@
 pipeline {
-    agent any
+    agent {
+        node {
+            label 'jenkins_slave_node1'
+        }
+    }
     stages {
         stage("Checkout Code") {
             steps {
                 git url:'https://github.com/gouravpeche123/ci_pipeline_project.git',branch:'main'
-            }
-        }
-        stage("Cleanup Activity"){
-            steps{
-                sh 'docker rm -f $(docker ps -aq)'
             }
         }
         stage("Build Docker Image") {
