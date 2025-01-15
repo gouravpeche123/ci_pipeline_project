@@ -10,11 +10,6 @@ pipeline {
                 git url:'https://github.com/gouravpeche123/ci_pipeline_project.git',branch:'main'
             }
         }
-        stage("Cleanup Activity") {
-            steps {
-                sh 'docker rm -f $(docker ps -aq)'
-            }
-        }
         stage("Build Docker Image") {
             steps {
                 sh 'docker build -t myimage .'
